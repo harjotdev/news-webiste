@@ -4,7 +4,7 @@ const searchField= document.getElementById("search-input")
 const searchButton= document.getElementById("search-button")
 async function fetchRandomNews(){
     try{
-     const apiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json';
+  const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=20&apikey=${api}`;
     const response = await fetch(apiUrl);
      const data = await response.json();
     return data.articles;
